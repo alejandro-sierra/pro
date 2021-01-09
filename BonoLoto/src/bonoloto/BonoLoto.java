@@ -16,17 +16,14 @@ public class BonoLoto {
             for(int columnas=0;columnas<5;columnas++){
                 tabla[filas][columnas]=columnas*10+filas;
                 
-                 /*for (int i=0;i<numerosRojos.length;i++){
-                    for(int j=0;jtabla[filas];j++){
-                
-                    }
-                  }*/
-                 System.out.print(tabla[filas][columnas]+" ");
-                }
+                /*if(numerosRojos[i]==tabla[filas][columnas]){
+                    System.out.print("\033[031m" +numerosRojos[i]+ "  "
+                            +"\033[030m"+" ");*/
+                          
+                System.out.print(tabla[filas][columnas]+" ");
             }
             System.out.println("");
-       
-        
-    }//cierre main
+        }
+    }
+}
     
-} //cierre class
