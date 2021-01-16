@@ -12,35 +12,56 @@ public class Profesor {
     private double tipoIRPF;
     
 
-    public static void nuevoProfesor(Profesor p){
-        Scanner sc = new Scanner(System.in);
+    public static void nuevoProfesor(){
         
     }
 
-/*
-    public Profesor(String dni, String nombre, double sueldoBase, double tipoIRPF) {
-        this.dni = dni;
-        this.nombre = nombre;
-        this.sueldoBase = sueldoBase;
-        this.tipoIRPF = tipoIRPF;
-    }
-  
-*/
-    
     public double calcularImporteHorasExtra(int mes){
         return horasExtra[mes]*pagoPorHorasExtra;
     }
     
+    public double calcularSueldoBruto(int mes){
+        return sueldoBase+calcularImporteHorasExtra(mes);
+    }
+    
+    public double calcularRetencionesIrpf(int mes){
+        return calcularSueldoBruto(mes) *tipoIRPF/100;
+    }
+    
+    public double calcularSueldo(int mes){
+        return calcularSueldoBruto(mes)-calcularRetencionesIrpf(mes);
+    }
     
     
+    public void ImprimeProfesor(int mes){
+//        return "\nNombre: "+this.nombre+
+//                "\nDNI: "+this.dni+
+//                "\nSueldo: "+this.calcularSueldo(mes)+
+//                "\nTipo IRPF: "+this.tipoIRPF;
+        System.out.println("Nombre: "+this.nombre);
+        System.out.println("DNI: "+this.dni);
+        System.out.println("Sueldo Base: "+this.calcularSueldo(mes));
+        System.out.println("Tipo IRPF: "+this.tipoIRPF);
+    }
     
+    public void leerProfesor(){
+        Scanner sc = new Scanner(System.in);
+        String nombre, dni;
+        double sueldoBase, tipoIRPF;
+        System.out.print("Nombre: ");nombre=sc.nextLine();
+        System.out.print("DNI: ");dni=sc.nextLine();
+        System.out.print("Sueldo Base: ");sueldoBase=sc.nextDouble();
+        System.out.print("Tipo IRPF: ");tipoIRPF=sc.nextDouble();
+        this.setNombre(nombre);
+        this.setDni(dni);
+        this.setSueldoBase(sueldoBase);
+        this.setTipoIRPF(tipoIRPF);
+        System.out.println("");
+    }
     
-    
-    
-    
-    
-    
-    
+    public void imprimirNomina(int mes){
+        
+    }
     
     
     
