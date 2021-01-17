@@ -63,6 +63,11 @@ public class Arrays00 {
             if (opcion==6) break;
         }
     }
+    
+    
+    
+    
+    
 
 public static int[] altas(int [] lista){
     int n;

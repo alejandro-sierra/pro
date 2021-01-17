@@ -12,8 +12,8 @@ public class Profesor {
     private double tipoIRPF;
     
 
-    public static void nuevoProfesor(){
-        
+    public static void nuevoProfesor(Profesor p){
+        p.leerProfesor();
     }
 
     public double calcularImporteHorasExtra(int mes){
@@ -34,10 +34,6 @@ public class Profesor {
     
     
     public void ImprimeProfesor(int mes){
-//        return "\nNombre: "+this.nombre+
-//                "\nDNI: "+this.dni+
-//                "\nSueldo: "+this.calcularSueldo(mes)+
-//                "\nTipo IRPF: "+this.tipoIRPF;
         System.out.println("Nombre: "+this.nombre);
         System.out.println("DNI: "+this.dni);
         System.out.println("Sueldo Base: "+this.calcularSueldo(mes));
@@ -56,7 +52,6 @@ public class Profesor {
         this.setDni(dni);
         this.setSueldoBase(sueldoBase);
         this.setTipoIRPF(tipoIRPF);
-        System.out.println("");
     }
     
     public void imprimirNomina(int mes){
