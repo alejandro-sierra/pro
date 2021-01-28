@@ -15,6 +15,15 @@ public class Profesor {
     Profesor(){
     
     }
+
+    public Profesor(String dni, String nombre, double sueldoBase, double tipoIRPF) {
+        this.dni = dni;
+        this.nombre = nombre;
+        this.sueldoBase = sueldoBase;
+        this.tipoIRPF = tipoIRPF;
+    }
+    
+    
     
     public void nuevoProfesor(){
         Scanner sc = new Scanner(System.in);
@@ -43,7 +52,7 @@ public class Profesor {
    
     public String imprimir(){
         String resultado =
-        "\nNombre: " + nombre +
+        "Nombre: " + nombre +
         "\nDNI: " + dni +
         "\nSueldo Base: " + sueldoBase +
         "\nTipo IRPF: " + tipoIRPF + "\n";
@@ -57,13 +66,12 @@ public class Profesor {
         return
         "\nNombre: " + nombre +
         "\nDNI: " + dni +
-        "\nCurso: " + curso + "Nomina del mes" + nombreMes[mes-1] +
+        "\nCurso: " + curso + "     Nomina del mes " + nombreMes[mes-1] +
         "\nHoras extra: : " + horasExtra[mes] +
         "\nTipo IRPF: " + tipoIRPF +
         "\nSueldo bruto: " + calcularSueldoBruto(mes) +
         "\nRetenciones por IRPF: " + calcularRetencionIRPF(mes) +
         "\nSueldo neto: " + calcularSueldo(mes) + "\n";
-
     }
     
     
