@@ -2,7 +2,7 @@ package profesor02;
 
 import java.util.Scanner;
 
-public class Profesor {
+public class Profesor implements Comparable<Profesor>{
     private static String curso;
     private static double pagoPorHorasExtra;
     private String dni;
@@ -142,7 +142,16 @@ public class Profesor {
     public void setTipoIRPF(double tipoIRPF) {
         this.tipoIRPF = tipoIRPF;
     }
-    
-    
+
+    @Override
+    public int compareTo(Profesor p) {
+        if(nombre.compareTo(p.nombre)<0){
+            return -1;
+        }
+        if(nombre.compareTo(p.nombre)>0){
+            return 1;
+        }
+        return 0;
+    }
     
 }

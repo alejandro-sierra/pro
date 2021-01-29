@@ -1,5 +1,6 @@
 package profesor02;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Principal {
@@ -30,6 +31,8 @@ public class Principal {
             System.out.println("4. INTRODUCION HORAS EXTRAS REALIZADAS EN UN MES");
             System.out.println("5. LISTADO DE PROFESORES");
             System.out.println("6. LISTADO DE NOMINAS DE UN MES");
+            System.out.println("7. ORDENAR POR NOMBRE");
+//            System.out.println("8. ORDENAR POR ");
             System.out.println("0. SALIR DEL PROGRAMA");
             System.out.print("     OPCION SELECIONADA: ");opcion=sc.nextInt();
             sc.nextLine();
@@ -90,6 +93,9 @@ public class Principal {
                     for(Profesor valor: lista){
                         System.out.println(valor.imprimirNomina(mes));
                     }
+                    break;
+                case 7:
+                    Arrays.sort(lista);
                     break;
                 case 0:
                     
