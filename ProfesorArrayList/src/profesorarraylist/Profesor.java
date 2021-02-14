@@ -1,8 +1,8 @@
-package profesor02;
+package profesorarraylist;
 
 import java.util.Scanner;
 
-public class Profesor implements Comparable<Profesor> {
+public class Profesor {
 
     private static String curso;
     private static double pagoPorHorasExtra;
@@ -131,7 +131,6 @@ public class Profesor implements Comparable<Profesor> {
         this.tipoIRPF = tipoIRPF;
     }
 
-    @Override
     public int compareTo(Profesor p) {
         if (nombre.compareTo(p.nombre) < 0) {
             return -1;
