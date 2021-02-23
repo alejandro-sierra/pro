@@ -8,6 +8,7 @@ public class Alumno extends Persona {
     private String fechaNacimiento;
 
     public Alumno() {
+        super(); //no es necesario ponerlo, pero es recomendable
     }
 
     public Alumno(String dni, String nombre, String domicilio, String codigoPostal, String cuidad, String telefono,
@@ -30,7 +31,8 @@ public class Alumno extends Persona {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder(super.toString());
+        StringBuilder sb = new StringBuilder("****ALUMNO****");
+        sb.append(super.toString());
         sb.append("\nCurso: ");
         sb.append(curso);
         sb.append("\nFecha nacimieto: ");
