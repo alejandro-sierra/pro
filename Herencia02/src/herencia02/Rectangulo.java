@@ -30,10 +30,10 @@ public class Rectangulo extends Figura {
     public void pideDatos() {
         Scanner sc = new Scanner(System.in);
         super.pideDatos();
-        System.out.println("Lado 1: ");
+        System.out.print("Lado 1: ");
         lado1 = sc.nextDouble();
         sc.nextDouble();
-        System.out.println("Lado 2: ");
+        System.out.print("Lado 2: ");
         lado2 = sc.nextDouble();
         sc.nextDouble();
     }
@@ -42,9 +42,9 @@ public class Rectangulo extends Figura {
     public String toString(){
         StringBuilder sb = new StringBuilder(super.toString());
         //sb.append(super.toString()); se puede poner asi o como arriba
-        sb.append("\nLado 1:");
+        sb.append("\nLado 1: ");
         sb.append(lado1);
-        sb.append("\nLado 2:");
+        sb.append("\nLado 2: ");
         sb.append(lado2);
         return  sb.toString();
     }

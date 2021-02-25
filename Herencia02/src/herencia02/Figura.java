@@ -22,8 +22,9 @@ public abstract class Figura {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("\nColor");
+        sb.append("\nColor: ");
         sb.append(color);
+        System.out.println("");
         return sb.toString();
     }
 
