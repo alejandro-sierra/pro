@@ -1,4 +1,8 @@
 package validariban;
+/**
+ * 
+ * @author Alejandro Ballesta Sierras
+ */
 
 public class ValidarIBAN {
 
